@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    height: 70px;
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 0 30px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.div1 ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.div1 ul li a{
+    color: #475569;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.div1 ul li a:hover{
+    color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+.first-section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+    align-items: center;
+}
+.first-section h2{
+    font-size: 30px;
+    font-weight: 800;
+
+}
+@keyframes slideIn {
+     form{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+       transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+.first-section .image{
+    width: 350px;
+    border-radius: 100px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    transition: 0.4s;
+    animation: slideIn 1s ease-in;
+}
+
+.first-section .text{
+    font-size: 18px;
+    width: 300px;
+}
+.first-section .text span{
+    font-weight: 700;
+    color: blue;
+}
+.first-section .image:hover{
+    transform: scale(1.05) rotate(2deg);
+}
+.second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.second-section .project{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around ;
+    width: 100%;
+}
+.second-section .project .card{
+    background-color:rgb(236, 163, 72);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 20px black;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+.second-section .project .card:hover{
+    transform: scale(1.1);
+     background-color:rgb(238, 134, 8);
+}
+.skill .card{
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+
+/******Formulaire*******/
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contact h2{
+    margin-bottom: 20px;
+}
+.contact form div{
+    display: flex;
+    flex-direction: column;
+}
+.contact form{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    height: 300px;
+    width: 320px;
+    box-shadow: 1px 1px 20px black;
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+.contact form:hover{
+    transform: scale(1.1);
+}
+.contact form input{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+.contact form .button{
+    border: 2px solid black;
+    height: 30px;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.button:hover{
+    color: white;
+    background-color: black;
+}
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+footer p{
+    width: 100%;
+    text-align: center;  
+}
+/**Responsive design pour les telephones**/
+@media (max-width:768px){
+    .first-section{
+        flex-direction: column;
+    }
+    .first-section .image{
+        width: 200px;
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project .card{
+        width: 200px;
+    }
+    header {
+        padding: 10px;
+    }
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    .div1 ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .div1 ul li a {
+        margin: 0;
+    }
+}
